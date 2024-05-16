@@ -1,7 +1,7 @@
 package com.code;
 
-import java.util.HashSet;
-import java.util.Set;
+import java.util.HashMap;
+import java.util.Map;
 
 
 //Solve the problem [Java]
@@ -35,23 +35,27 @@ public class Class1 {
 
 	public static void main(String[] args) {
 	
-		//System.out.println(findPairBrute(new int[] { 4, 5, 1, -3, 6 }, 11));
+		System.out.println(firstRepeatingCharacter("insidecode"));
+		System.out.println(firstRepeatingCharacter("programming"));
+		System.out.println(firstRepeatingCharacter("abcd"));
+		System.out.println(firstRepeatingCharacter("abba"));
 		
 
 	}
 
 	public static char firstRepeatingCharacter(String str){
         
+		
         char [] chars = str.toCharArray();  
-        Set<Character> setC = new HashSet<>();
+        Map<Character, Boolean> mapC = new HashMap();
         
         for(int i = 0; i < chars.length; i++){
             
-            if(setC.contains(chars[i])){
+            if(mapC.containsKey(chars[i])){
                 return chars[i];
             }
             
-            setC.add(chars[i]);
+            mapC.put(chars[i], true);
             
         }
         
