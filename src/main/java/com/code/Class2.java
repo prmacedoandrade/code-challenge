@@ -46,6 +46,9 @@ public class Class2 {
 
 			for (int j = i + 1; j < arr.length; j++) {
 
+				System.out.println(j + " "+ i);
+
+				
 				if (arr[i] + arr[j] == k) {
 					return true;
 				}
@@ -53,7 +56,8 @@ public class Class2 {
 			}
 
 		}
-
+		
+	
 		return false;
 
 	}
